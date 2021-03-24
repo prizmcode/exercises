@@ -1,0 +1,84 @@
+<head>
+<style>
+    body {
+        background: #ccc;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card {
+        background: white;
+    }
+
+    .card img {
+        display: block;
+        border: 0;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    @media screen and (min-width: 40em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+ 
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 52em) {
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+ 
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+
+    </style>
+</head>
+
+<body>
+<div class="centered">
+ 
+    <section class="cards">
+         
+        <article class="card">
+            <img src="/assets/gardening.jpg" />
+           <h2>Gardening</h2>
+           <p>Spring is here! Woohoo!</p>
+        </article><!-- /card-one -->
+
+<article class="card">
+    <img src="/assets/ceramics.jpg" />
+           <h2>Ceramics</h2>
+           <p>Lets make a pot!</p>
+    </article><!-- /card-two -->
+
+<article class="card">
+    <img src="/assets/guitar.jpg" />
+          <h2>Music</h2>
+          <p>I know its only rock and roll but I like it.</p>
+    </article><!-- /card-three -->
+
+<article class="card">
+        <img src="/assets/code.jpg" />
+           <h2>Coding</h2>
+           <p>Lets build something.</p>
+    </article><!-- /card-four -->
+
+</section>
+</div>
+</body>
