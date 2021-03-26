@@ -1,13 +1,153 @@
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Oswald&family=Poppins&display=swap" rel="stylesheet">
 <style>
+
+
+    * {
+    box-sizing: border-box;
+    font-size: 100%;
+    }
+    html { font-size: calc(1em + 1vw) 
+       background-image: url(/assets/path.jpeg);
+     }
     body {
-        background: #ccc;
+        font-family: 'Poppins';
         margin: 0;
         padding: 0;
-    }
+        font-size: 1em;
+        /*
+        background: url(/assets/path.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  */
 
-    .card {
+      }
+      h1 {
+        font-family: 'Monoton';
+      }
+      .grid-master {
+        display: grid;
+        grid-template-columns:1fr minmax(400px,1200px) 1fr;
+        grid-template-rows:minmax(100px,auto);
+      
+      }
+      #logo {
+        grid-column:1/5;
+        background: black;
+      }
+      #logo h1 {
+        font-family: 'Monoton';
+        color: white;
+      }
+      #feature {
+        background: url(/assets/chickens.png) no-repeat left center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+        grid-column: 1/5;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      #footer {
+        grid-column:1/5;
+        text-align: center;
+      }
+      .grid-inner {
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
         background: white;
+      }
+      .grid-inner #feature h1 {
+        font-size: 2em;
+      }
+      .grid-inner #feature {
+        color: white;
+        font-size: 1.2em;
+      }
+      .grid-inner #feature div {
+       
+      }
+      #feature #tag {
+        background-color: rgba(48, 97, 99, 0.7); 
+        padding: 2em 3em;
+        font-size: .8em;
+      }
+      #feature #tag a {
+        background: yellow;
+        padding:1em;
+        border-radius: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        margin: 1em 0;
+        display: inline-block;
+        font-family: 'Monoton';
+      }
+      .grid-inner .article {
+        background: #ccc;
+      }
+      .grid-inner .article img {
+        width: 100%;
+        max-height: 75px;
+      }
+
+
+#rainbow-grid {
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);;
+  grid-template-rows:repeat(3, 1fr);
+  grid-row-gap:1em;
+  margin: 2em 0;
+  background-image: url(/assets/Crystal.jpeg);
+
+}
+#rainbow-grid > div {
+  height:500px;
+  mix-blend-mode: darken;
+}
+.red {
+  grid-column:1 / 4;
+  grid-row:1 / 3;
+  background: rgba(255, 0, 0, .5);
+}
+.yellow {
+  grid-column:3/6;
+  grid-row:1/3;
+  background: rgba(255, 244, 0, .5);
+}
+.orange {
+  grid-column:2 / 5;
+  grid-row:1/3;
+  background: rgba(235, 125, 52, .5);
+}
+.green {
+  grid-column:1/3;
+  grid-row:2/4;
+  background: rgba(14,214,0,.5);
+}
+.blue {
+  grid-column:2/5;
+  grid-row:2/4;
+  background: rgba(71,142,214,.5);
+}
+.purple {
+  grid-column:4/6;
+  grid-row:2/4;
+  background: rgba(176,44,232,.5);
+}
+    .shadow {
+        -webkit-box-shadow: -1px 1px 15px 6px #C4C4C4; 
+        box-shadow: -1px 1px 15px 6px #C4C4C4;
+
+    }
+    .card {
+    
+        margin: 1em 0;
+        
     }
 
     .card img {
@@ -16,8 +156,35 @@
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
+       
     }
-    @media screen and (min-width: 40em) {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) { 
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+ 
+    .card {
+        width: 25%;
+        flex-wrap: wrap;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+    .cards {
+       
+    }
+    .card {
+        width: 50%;
+flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px) { /* small */
     .cards {
         display: flex;
         flex-wrap: wrap;
@@ -25,59 +192,79 @@
     }
  
     .card {
-        flex: 0 1 calc(50% - 1em);
+        flex: 0 1 100%;
+        margin: 2em 0;
     }
-}
 
-@media screen and (min-width: 52em) {
-    .card {
-        flex: 0 1 calc(25% - 1em);
-    }
-}
 
-@media screen and (min-width: 60em) {
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
- 
-    .card {
-        flex: 0 1 calc(25% - 1em);
-    }
+      #icon img {
+    width: 7em;
+  }
+
+
+
+
+  .grid-inner #feature #tag {
+    grid-column:1/5;
+  }
+  #bumper, #tag {
+    display: inline;
+  }
+
+
 }
 
     </style>
 </head>
 
 <body>
+
+  <div class="grid-inner">
+    <div id="logo">
+      <h1>prizmstudio</h1>
+    </div>
+    <div id="feature">
+        <div id="bumper"></div>
+        <div id="tag" class="pad">
+          <h1>Chickens!</h1>
+          <p>Who knew having backyard poultry would be so rewarding.</p><p>Eggs, fertilizer, and heaps of personality.</p>
+          <p><a href="#">Read More</a></p>
+      </div>
+    </div>
+
+
+  </div> <!-- end grid inner -->
+
+
+
 <div class="centered">
  
     <section class="cards">
          
-        <article class="card">
+        <article class="card shadow">
             <img src="/assets/gardening.jpg" />
            <h2>Gardening</h2>
            <p>Spring is here! Woohoo!</p>
         </article><!-- /card-one -->
 
-<article class="card">
+<article class="card shadow">
     <img src="/assets/ceramics.jpg" />
            <h2>Ceramics</h2>
            <p>Lets make a pot!</p>
     </article><!-- /card-two -->
 
-<article class="card">
+<article class="card shadow">
     <img src="/assets/guitar.jpg" />
           <h2>Music</h2>
           <p>I know its only rock and roll but I like it.</p>
     </article><!-- /card-three -->
 
-<article class="card">
+<article class="card shadow">
         <img src="/assets/code.jpg" />
            <h2>Coding</h2>
            <p>Lets build something.</p>
     </article><!-- /card-four -->
+
 
 </section>
 </div>
