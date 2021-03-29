@@ -1,8 +1,8 @@
 <head>
+  <meta name="viewport" content="width=device-width" initial-scale=1 maximum-scale=1>
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Oswald&family=Poppins&display=swap" rel="stylesheet">
 <style>
-
 
     * {
     box-sizing: border-box;
@@ -28,12 +28,7 @@
       h1 {
         font-family: 'Monoton';
       }
-      .grid-master {
-        display: grid;
-        grid-template-columns:1fr minmax(400px,1200px) 1fr;
-        grid-template-rows:minmax(100px,auto);
-      
-      }
+
       #logo {
         grid-column:1/5;
         background: black;
@@ -41,9 +36,11 @@
       #logo h1 {
         font-family: 'Monoton';
         color: white;
+        font-size: 3vw;
+        margin: 1em;
       }
       #feature {
-        background: url(/assets/chickens.png) no-repeat left center fixed; 
+        background: url(/assets/chickens.png) no-repeat left center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -63,26 +60,26 @@
       }
       .grid-inner #feature h1 {
         font-size: 2em;
+        background: purple;
       }
       .grid-inner #feature {
         color: white;
         font-size: 1.2em;
       }
-      .grid-inner #feature div {
-       
-      }
+    
       #feature #tag {
         background-color: rgba(48, 97, 99, 0.7); 
         padding: 2em 3em;
         font-size: .8em;
       }
       #feature #tag a {
-        background: yellow;
+        background: rgb(255,198,78);
+background: linear-gradient(90deg, rgba(255,198,78,1) 15%, rgba(0,212,255,1) 100%);
         padding:1em;
-        border-radius: 15px;
+        border-radius: 30px;
         text-decoration: none;
         font-weight: bold;
-        color: black;
+        color: #355ea6;
         margin: 1em 0;
         display: inline-block;
         font-family: 'Monoton';
@@ -140,14 +137,30 @@
   background: rgba(176,44,232,.5);
 }
     .shadow {
-        -webkit-box-shadow: -1px 1px 15px 6px #C4C4C4; 
-        box-shadow: -1px 1px 15px 6px #C4C4C4;
+        -webkit-box-shadow: -1px 1px 7px 6px #C4C4C4; 
+        box-shadow: -1px 1px 7px 6px #C4C4C4;
 
     }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
     .card {
-    
-        margin: 1em 0;
+      background-color: white;
+      border-radius: 0.25rem;
+      box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+      margin: 1em;
+      text-decoration: none;
         
+    }
+    
+    .card .card-content {
+      padding: 1em;
+      display: block;
+    }
+    .card h2 {
+      font-size: 4vw;
     }
 
     .card img {
@@ -156,63 +169,36 @@
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
-       
+        border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
     }
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) { 
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
 
-    }
- 
-    .card {
-        width: 25%;
-        flex-wrap: wrap;
-    }
-}
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) { 
     .cards {
-       
-    }
-    .card {
-        width: 50%;
-flex-wrap: wrap;
+       grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media only screen and (max-width: 600px) { /* small */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) { 
     .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        grid-template-columns: repeat(4, 1fr);
     }
- 
-    .card {
-        flex: 0 1 100%;
-        margin: 2em 0;
-    }
+}
 
 
+@media only screen and (max-width: 600px) { /* small */
+      
       #icon img {
     width: 7em;
   }
-
-
-
-
-  .grid-inner #feature #tag {
-    grid-column:1/5;
-  }
-  #bumper, #tag {
-    display: inline;
-  }
-
-
 }
+
+
+
 
     </style>
 </head>
@@ -241,29 +227,37 @@ flex-wrap: wrap;
  
     <section class="cards">
          
-        <article class="card shadow">
+        <a href="#" class="card shadow">
             <img src="/assets/gardening.jpg" />
+            <div class="card-content">
            <h2>Gardening</h2>
            <p>Spring is here! Woohoo!</p>
-        </article><!-- /card-one -->
+           </div>
+        </a><!-- /card-one -->
 
-<article class="card shadow">
+<a href="#" class="card shadow">
     <img src="/assets/ceramics.jpg" />
+    <div class="card-content">
            <h2>Ceramics</h2>
            <p>Lets make a pot!</p>
-    </article><!-- /card-two -->
+      </div>
+          </a><!-- /card-two -->
 
-<article class="card shadow">
+<a href="#" class="card shadow">
     <img src="/assets/guitar.jpg" />
+    <div class="card-content">
           <h2>Music</h2>
           <p>I know its only rock and roll but I like it.</p>
-    </article><!-- /card-three -->
+          </div>
+    </a><!-- /card-three -->
 
-<article class="card shadow">
+<a href="#" class="card shadow">
         <img src="/assets/code.jpg" />
-           <h2>Coding</h2>
+        <div class="card-content">
+        <h2>Coding</h2>
            <p>Lets build something.</p>
-    </article><!-- /card-four -->
+           </div>
+    </a><!-- /card-four -->
 
 
 </section>
