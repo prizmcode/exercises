@@ -1,265 +1,316 @@
 <head>
-  <meta name="viewport" content="width=device-width" initial-scale=1 maximum-scale=1>
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Oswald&family=Poppins&display=swap" rel="stylesheet">
-<style>
-
+    <meta name="viewport" content="width=device-width" initial-scale=1 maximum-scale=1>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Oswald&family=Poppins&display=swap" rel="stylesheet">
+    <style>
     * {
-    box-sizing: border-box;
-    font-size: 100%;
+        box-sizing: border-box;
+        font-size: 100%;
     }
-    html { font-size: calc(1em + 1vw) 
-       background-image: url(/assets/path.jpeg);
-     }
+
+    html {
+        font-size: calc(1em + 1vw) background-image: url(/assets/path.jpeg);
+    }
+
     body {
         font-family: 'Poppins';
         margin: 0;
         padding: 0;
         font-size: 1em;
-        /*
-        background: url(/assets/path.jpeg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  */
 
-      }
-      h1 {
-        font-family: 'Monoton';
-      }
+    }
 
-      #logo {
-        grid-column:1/5;
-        background: black;
-      }
-      #logo h1 {
+    h1, h2 {
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+
+    #logo {
+        grid-column: 1/5;
+
+
+    }
+
+    #logo h1 {
         font-family: 'Monoton';
         color: white;
-        font-size: 3vw;
-        margin: 1em;
-      }
-      #feature {
-        background: url(/assets/chickens.png) no-repeat left center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+        font-weight: 100;
+        font-size: 2vw;
+    }
+
+    #feature {
+        background: url(/assets/chickens.png) no-repeat left center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         grid-column: 1/5;
         display: grid;
         grid-template-columns: 1fr 1fr;
-      }
-      #footer {
-        grid-column:1/5;
-        text-align: center;
-      }
-      .grid-inner {
+    }
+
+
+    .grid-inner {
         display: grid;
-        grid-template-columns:repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         background: white;
-      }
-      .grid-inner #feature h1 {
+    }
+
+    .grid-inner #feature h1 {
         font-size: 2em;
-        background: purple;
-      }
-      .grid-inner #feature {
-        color: white;
+        background: rgba(0, 0, 0, .5);
+        padding: .5em;
+    }
+
+    .grid-inner #feature {
+        color: #cccccc;
         font-size: 1.2em;
-      }
-    
-      #feature #tag {
-        background-color: rgba(48, 97, 99, 0.7); 
-        padding: 2em 3em;
+        margin: 0 0 1em 0;
+    }
+
+    #feature #tag {
+        background: rgba(0, 0, 0, .8);
         font-size: .8em;
-      }
-      #feature #tag a {
-        background: rgb(255,198,78);
-background: linear-gradient(90deg, rgba(255,198,78,1) 15%, rgba(0,212,255,1) 100%);
-        padding:1em;
-        border-radius: 30px;
+        grid-column: 2/3;
+        padding: 1.5em;
+    }
+
+    #feature #tag h1 {
+        margin: 0;
+        color: #fff;
+    }
+
+    #feature #tag a {
+        background: rgb(255, 198, 78);
+        padding: 1em;
         text-decoration: none;
         font-weight: bold;
-        color: #355ea6;
+        text-transform: uppercase;
+        color: #000;
         margin: 1em 0;
         display: inline-block;
-        font-family: 'Monoton';
-      }
-      .grid-inner .article {
+        transition-timing-function: ease;
+    }
+    #feature #tag p {
+        margin: 1.5em;
+    }
+    .grid-inner .article {
         background: #ccc;
-      }
-      .grid-inner .article img {
+    }
+
+    .grid-inner .article img {
         width: 100%;
         max-height: 75px;
-      }
+    }
 
 
-#rainbow-grid {
-  display:grid;
-  grid-template-columns:repeat(5, 1fr);;
-  grid-template-rows:repeat(3, 1fr);
-  grid-row-gap:1em;
-  margin: 2em 0;
-  background-image: url(/assets/Crystal.jpeg);
+    #rainbow-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        ;
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 1em;
+        margin: 2em 0;
+        background-image: url(/assets/Crystal.jpeg);
 
-}
-#rainbow-grid > div {
-  height:500px;
-  mix-blend-mode: darken;
-}
-.red {
-  grid-column:1 / 4;
-  grid-row:1 / 3;
-  background: rgba(255, 0, 0, .5);
-}
-.yellow {
-  grid-column:3/6;
-  grid-row:1/3;
-  background: rgba(255, 244, 0, .5);
-}
-.orange {
-  grid-column:2 / 5;
-  grid-row:1/3;
-  background: rgba(235, 125, 52, .5);
-}
-.green {
-  grid-column:1/3;
-  grid-row:2/4;
-  background: rgba(14,214,0,.5);
-}
-.blue {
-  grid-column:2/5;
-  grid-row:2/4;
-  background: rgba(71,142,214,.5);
-}
-.purple {
-  grid-column:4/6;
-  grid-row:2/4;
-  background: rgba(176,44,232,.5);
-}
+    }
+
+    #rainbow-grid>div {
+        height: 500px;
+        mix-blend-mode: darken;
+    }
+
+    .red {
+        grid-column: 1 / 4;
+        grid-row: 1 / 3;
+        background: rgba(255, 0, 0, .5);
+    }
+
+    .yellow {
+        grid-column: 3/6;
+        grid-row: 1/3;
+        background: rgba(255, 244, 0, .5);
+    }
+
+    .orange {
+        grid-column: 2 / 5;
+        grid-row: 1/3;
+        background: rgba(235, 125, 52, .5);
+    }
+
+    .green {
+        grid-column: 1/3;
+        grid-row: 2/4;
+        background: rgba(14, 214, 0, .5);
+    }
+
+    .blue {
+        grid-column: 2/5;
+        grid-row: 2/4;
+        background: rgba(71, 142, 214, .5);
+    }
+
+    .purple {
+        grid-column: 4/6;
+        grid-row: 2/4;
+        background: rgba(176, 44, 232, .5);
+    }
+
     .shadow {
-        -webkit-box-shadow: -1px 1px 7px 6px #C4C4C4; 
+        -webkit-box-shadow: -1px 1px 7px 6px #C4C4C4;
         box-shadow: -1px 1px 7px 6px #C4C4C4;
 
     }
 
     .cards {
-      display: grid;
-      grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr;
+
     }
+
     .card {
-      background-color: white;
-      border-radius: 0.25rem;
-      box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-      margin: 1em;
-      text-decoration: none;
+        background-color: purple;
+        border-radius: 0.25rem;
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        margin: 1em;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .card h2 {
+        font-size: 1.2em;
+        padding: 1em;
+        margin: 10em 0 0 0;
+        color: #ffffff;
+        background: rgba(0, 0, 0, .7);
+    }
+
+    .card p {
+        padding: 20px;
+        margin: 0;
+        color: #999999;
+        background: rgba(0, 0, 0, .7);
+    }
+
+    .card a {
+        text-decoration: none;
+
+    }
+
+    .card .img-wrap {
+        display: flex;
+        flex-direction: column;
         
     }
-    
-    .card .card-content {
-      padding: 1em;
-      display: block;
-    }
-    .card h2 {
-      font-size: 4vw;
+
+    .card .gardening {
+        background: url(/assets/coneflower.jpeg) no-repeat center;
+        background-size: cover;
+
     }
 
-    .card img {
-        display: block;
-        border: 0;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-        border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+    .card .ceramics {
+        background: url(/assets/ceramics.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .card .guitar {
+        background: url(/assets/guitar.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .card .code {
+        background: url(/assets/code.jpg) no-repeat center;
+        background-size: cover;
     }
 
 
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) { 
-    .cards {
-       grid-template-columns: repeat(2, 1fr);
+        #feature #tag {
+            grid-template-columns: 1fr;
+        }
     }
-}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) { 
-    .cards {
-        grid-template-columns: repeat(4, 1fr);
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
-}
 
 
-@media only screen and (max-width: 600px) { /* small */
-      
-      #icon img {
-    width: 7em;
-  }
-}
+    @media only screen and (max-width: 600px) {
+        /* small */
 
+        #icon img {
+            width: 7em;
+        }
 
+        #feature {
+            grid-template-columns: 1fr;
+            width: 100%;
+                    background-size: cover;
+        }
 
-
+        .card {
+            margin: 1em 0;
+        }
+        #tag {
+            margin: 20em 0 0 0;
+        }
+    }
     </style>
 </head>
 
 <body>
-
-  <div class="grid-inner">
-    <div id="logo">
-      <h1>prizmstudio</h1>
+    <div class="grid-inner">
+        <div id="feature">
+            <div id="logo">
+                <h1>prizmstudio</h1>
+            </div>
+            <div id="tag">
+                <h1>BLOG: COVID PROJECT: CHICKENS!</h1>
+                <p>I've been playing around with the idea of getting chickens for some years now, and the COVID lockdown seemed the perfect opportunity to take the project on.</p><p>About a year in I'm happy to report, I LOVE having chickens.</p>
+                <p>We had very specific site requirement, so I knew it was going to have to be a custom build. I'd built things in the past, but this was definitively the most ambitious woodworking project I had ever taken on. I had the support of my husband when I needed it, but I took ownership of the design and build.</p><p>It turns out power tools are fun, and I love working outside, so this was a win-win for me.</p>
+                <p><a href="#">Read More</a></p>
+            </div>
+        </div>
+    </div> <!-- end grid inner -->
+    <div class="centered">
+        <section class="cards">
+            <a href="#" class="card shadow">
+                <div class="img-wrap gardening">
+                    <h2>From the Garden</h2>
+                    <p>Mary, Mary quite contrary, how does your garden grow?</p>
+                </div>
+            </a><!-- /card-one -->
+            <a href="#" class="card shadow">
+                <div class="img-wrap ceramics">
+                    <h2>Clay Workshops: Register</h2>
+                    <p>I've been gifted with the use of a legit pottery wheel and kiln and I want to share my resources.</p><p>Come over for a ceramics workshop!</p>
+                </div>
+            </a><!-- /card-two -->
+            <a href="#" class="card shadow">
+                <div class="img-wrap guitar">
+                    <h2>Music</h2>
+                    <p>Once upon a time I was in a pop-rock band in Ft. Lauderdale, Florida chasing my dream of being a touring artist/musician.</p>
+                    <p>Unsurprisingly, it didn't pan out. 
+                </div>
+            </a><!-- /card-three -->
+            <a href="#" class="card shadow">
+                <div class="img-wrap code">
+                    <h2>Diving back into Codeland</h2>
+                    <p>I remember when my fifth grade teacher told us about this amazing new technology called email and the "interweb". I was immediately intrigued. Computers communicating together instantaneously? What is this black magic and how can I learn about it.</p>
+                </div>
+            </a><!-- /card-four -->
+        </section>
     </div>
-    <div id="feature">
-        <div id="bumper"></div>
-        <div id="tag" class="pad">
-          <h1>Chickens!</h1>
-          <p>Who knew having backyard poultry would be so rewarding.</p><p>Eggs, fertilizer, and heaps of personality.</p>
-          <p><a href="#">Read More</a></p>
-      </div>
-    </div>
-
-
-  </div> <!-- end grid inner -->
-
-
-
-<div class="centered">
- 
-    <section class="cards">
-         
-        <a href="#" class="card shadow">
-            <img src="/assets/gardening.jpg" />
-            <div class="card-content">
-           <h2>Gardening</h2>
-           <p>Spring is here! Woohoo!</p>
-           </div>
-        </a><!-- /card-one -->
-
-<a href="#" class="card shadow">
-    <img src="/assets/ceramics.jpg" />
-    <div class="card-content">
-           <h2>Ceramics</h2>
-           <p>Lets make a pot!</p>
-      </div>
-          </a><!-- /card-two -->
-
-<a href="#" class="card shadow">
-    <img src="/assets/guitar.jpg" />
-    <div class="card-content">
-          <h2>Music</h2>
-          <p>I know its only rock and roll but I like it.</p>
-          </div>
-    </a><!-- /card-three -->
-
-<a href="#" class="card shadow">
-        <img src="/assets/code.jpg" />
-        <div class="card-content">
-        <h2>Coding</h2>
-           <p>Lets build something.</p>
-           </div>
-    </a><!-- /card-four -->
-
-
-</section>
-</div>
 </body>
